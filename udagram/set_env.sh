@@ -8,4 +8,4 @@ export AWS_BUCKET=arn:aws:s3:::hello-bckt
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=mysecretstring
-export URL=http://contactsapi-env.eba-6vftqnmh.us-east-1.elasticbeanstalk.com/
+export URL=http://contactsapi-env-1.eba-xwbxa3ac.us-east-1.elasticbeanstalk.com/
