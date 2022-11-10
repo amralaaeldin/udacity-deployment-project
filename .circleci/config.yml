@@ -66,27 +66,20 @@ jobs:
             echo "# TODO: Install, build, deploy in both apps"
             npm run frontend:deploy
       - run:
-          name: Set Env
-          # TODO: Set Env variables for backend API  
-          command: |
-            echo "TODO: Set Env for backend API"
-            eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID      
-            eb setenv AWS_BUCKET=$AWS_BUCKET      
-            eb setenv AWS_PROFILE=$AWS_PROFILE      
-            eb setenv AWS_REGION=$AWS_REGION      
-            eb setenv AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY      
-            eb setenv URL=$URL      
-            eb setenv JWT_SECRET=$JWT_SECRET      
-            eb setenv POSTGRES_DB=$POSTGRES_DB      
-            eb setenv POSTGRES_HOST=$POSTGRES_HOST      
-            eb setenv POSTGRES_PASSWORD=$POSTGRES_PASSWORD      
-            eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME      
-      - run:
           name: Deploy API
           # TODO: Install, build, deploy in both apps
           command: |
             echo "# TODO: Install, build, deploy in both apps"
             npm run api:deploy
+      - run:
+          name: Set Env
+          # TODO: Set Env variables for backend API  
+          command: |
+            echo "TODO: Set Env for backend API"
+            eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY      
+            eb setenv AWS_BUCKET=$AWS_BUCKET AWS_PROFILE=$AWS_PROFILE AWS_REGION=$AWS_REGION URL=$URL      
+            eb setenv JWT_SECRET=$JWT_SECRET      
+            eb setenv POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME      
 workflows:
   udagram:
     jobs:
