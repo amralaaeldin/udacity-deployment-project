@@ -22,7 +22,6 @@ jobs:
           name: Install Front-End Dependencies
           command: |
             eb init "$APP_NAME" --region $REGION
-            eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID 
             echo "NODE --version" 
             echo $(node --version)
             echo "NPM --version" 
