@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Install Front-End Dependencies
           command: |
-            echo "$APP_Name"
+            echo $APP_Name
             echo "NODE --version" 
             echo $(node --version)
             echo "NPM --version" 
