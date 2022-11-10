@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "echo \"$APP_NAME\" && echo $APP_NAME && ng build --configuration production ",
+    "build": "ng build --configuration production ",
     "deploy": "npm install && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh",
     "test": "ng test --watch=false",
     "lint": "ng lint",
